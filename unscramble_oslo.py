@@ -19,12 +19,10 @@ def main():
     # data stored in folder above repository
     dataset.get_data()
 
-    # Locate file
     dirpath = os.path.dirname(__file__)
     filepath = os.path.abspath(os.path.join(dirpath, "..", "oslo_norway.osm"))
 
-
-    # resample.sample(osm_file, "sample.osm")
+    #resample.sample(filepath, "sample.osm")
 
 if __name__ == '__main__':
     main()

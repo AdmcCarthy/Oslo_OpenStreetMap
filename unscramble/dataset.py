@@ -17,8 +17,10 @@ def get_data():
     """
 
     os.chdir("..")
-    if not os.path.is_file('oslo_norway.osm'):
-
+    if os.path.isfile('oslo_norway.osm'):
+        print('Data is present')
+        print("")
+    else:
         print('Starting download')
         print('File is approx 96 MB, this may take while....')
         # Get compressed osm dataset

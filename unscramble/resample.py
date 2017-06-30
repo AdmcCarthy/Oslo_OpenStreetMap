@@ -29,9 +29,9 @@ def sample(osm_file, sample_file, k=10):
         output.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         output.write('<osm>\n  ')
 
-        # Write every kth top level element
-        for i, element in enumerate(get_element(OSM_FILE)):
-            if i % k == 0:
-                output.write(ET.tostring(element, encoding='utf-8'))
+    # Write every kth top level element
+    for i, element in enumerate(get_element(OSM_FILE)):
+        if i % k == 0:
+            output.write(ET.tostring(element, encoding='utf-8'))
 
-        output.write('</osm>')
+    output.write('</osm>')
