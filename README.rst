@@ -4,6 +4,22 @@ Stavanger_OpenStreetMap
 
 Exploring data for Stavanger in Open Street Map
 
+--------
+Workflow
+--------
+
+Parse XML file
+
+Unravel the dataset
+
+Identify problems in the data
+
+Audit and clean the data
+
+Import cleaned version in database
+
+Explore database to identify interesting features
+
 -------
 Dataset
 -------
