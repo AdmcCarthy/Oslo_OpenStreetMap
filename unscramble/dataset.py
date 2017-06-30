@@ -17,7 +17,7 @@ def get_data():
     """
 
     os.chdir("..")
-    if not os.path.isdir('test'):
+    if not os.path.is_file('oslo_norway.osm'):
 
         print('Starting download')
         print('File is approx 96 MB, this may take while....')
