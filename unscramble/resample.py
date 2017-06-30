@@ -25,7 +25,7 @@ def sample(osm_file, sample_file, k=10):
                 root.clear()
 
 
-    with open(SAMPLE_FILE, 'wb') as output:
+    with open(SAMPLE_FILE, 'w') as output:
         output.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         output.write('<osm>\n  ')
 
