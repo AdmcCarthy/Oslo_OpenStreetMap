@@ -1,14 +1,14 @@
 =======================
-Stavanger_OpenStreetMap
+Oslo_OpenStreetMap
 =======================
 
-Exploring data for Stavanger in Open Street Map
+Exploring data for Oslo in Open Street Map
 
 --------
 Workflow
 --------
 
-Parse XML file
+Parse file
 
 Unravel the dataset
 
