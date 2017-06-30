@@ -46,6 +46,15 @@ Resources
 ---------
 
 ^^^^^^^^^^^^^
+StackOverflow
+^^^^^^^^^^^^^
+
+Various queries
+
+https://stackoverflow.com/questions/16963352/decompress-bz2-files
+
+
+^^^^^^^^^^^^^
 OpenStreetMap
 ^^^^^^^^^^^^^
 
