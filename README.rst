@@ -12,14 +12,16 @@ Data is taken from OpenStreetMap.org using the Overpass API.
 
 https://www.openstreetmap.org/export#map=13/58.9611/5.6777
 
-58.9976
-58.9245
+Overpass QL version of this reques would be:
 
-5.6262
-5.7292
+    (
+        node(58.9976,5.6262,58.9245,5.7292);
+        <;
+    );
+    out meta;
 
 The data islicensed under the Open Data Commons Open Database License (ODbL)
-by the OpenStreetMap Foundation (OSMF)
+by the OpenStreetMap Foundation (OSMF).
 
 https://www.openstreetmap.org/copyright
 
