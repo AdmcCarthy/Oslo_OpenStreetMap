@@ -43,6 +43,5 @@ def main():
         resample.sample(filepath, "sample.osm")
         filepath = "sample.osm"
 
-
 if __name__ == '__main__':
     main()
