@@ -2,6 +2,24 @@
 Notes on problem
 ================
 
+-------------
+Data Elements
+-------------
+
+See OSM wiki for more.
+
+http://wiki.openstreetmap.org/wiki/Elements
+
+The three key elements are.
+
+nodes - (defining points in space)
+ways - (defining linear features and area boundaries)
+relations - (sometimes used to explain how other elements work together)
+
+All of the above can have tags which describe the meaning of a particular element.
+
+
+
 -------
 OSM XML
 -------
