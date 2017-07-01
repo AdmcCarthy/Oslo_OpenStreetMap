@@ -39,6 +39,10 @@ https://mapzen.com/data/metro-extracts/metro/oslo_norway/
 Resources
 ---------
 
+XPath Syntax
+
+https://www.w3schools.com/xml/xpath_syntax.asp
+
 ^^^^^^^^^^^^^
 StackOverflow
 ^^^^^^^^^^^^^

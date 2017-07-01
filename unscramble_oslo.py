@@ -39,11 +39,5 @@ def main():
     # Modify the filepath if required.
 
 
-    
-    if test:
-        # Reduce the number of elements to speed up testing
-        resample.sample(filepath, "sample.osm")
-        filepath = "sample.osm"
-
 if __name__ == '__main__':
     main()
