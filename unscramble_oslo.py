@@ -46,5 +46,10 @@ def main():
     print("tags present in dataset")
     pprint.pprint(tags)
 
+    issues = parse_xml.attribute_compare(filepath, "tag", "k")
+
+    print("issues")
+    pprint.pprint(issues)
+
 if __name__ == '__main__':
     main()

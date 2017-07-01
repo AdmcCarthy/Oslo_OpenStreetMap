@@ -3,6 +3,7 @@
 
 import xml.etree.cElementTree as ET
 import pprint
+import re
 
 
 def count_tags(filename):
@@ -24,7 +25,7 @@ def count_tags(filename):
     return file_overview
 
 
-def attribute_compare(file):
+def attribute_compare(file, tag_v, attribute):
     """Define regular expressions
     then make a dictionary of how many
     issues there are for each condition
@@ -36,9 +37,9 @@ def attribute_compare(file):
     problemchars = re.compile(r'[=\+/&<>;\'"\?%#$@\,\. \t\r\n]')
 
     def key_type(element, keys):
-        if element.tag == "tag":
-            val = element.attrib["k"]
-            
+        if element.tag == tag_v:
+            val = element.attrib[attribute]
+
             if lower.search(val):
                 keys["lower"] += 1
             elif lower_colon.search(val):
@@ -57,15 +58,6 @@ def attribute_compare(file):
 
         return keys
 
-    process_map(file)
+    key = process_map(file)
 
-def audit(filename):
-    """Parse
-    """
-
-    constraint = "tag"
-
-    for event, elem in ET.iterparse(filename, events=("start",)):
-        if elem.tag == "way":
-            # Only returns those that are named constraint
-            for tag in elem.iter(constraint):
+    return key
