@@ -5,19 +5,19 @@ Data Analyst nano-degree.
 """
 
 import os
+import pprint
 from unscramble import (
     dataset,
-    resample
+    parse_xml,
     )
 
-import bz2
 
 def main():
     """Investigate the Oslo
     OpenStreetMap dataset.
     """
 
-    test = False
+    test = True
 
     dirpath = os.path.dirname(__file__)
 
@@ -36,12 +36,25 @@ def main():
     # e.g. 7Zip for windows
     #
     # Modify the filepath if required.
-    filepath = filepath
 
     if test:
-        # Reduce the number of elements to speed up testing
-        resample.sample(filepath, "sample.osm")
-        filepath = "sample.osm"
+        filepath = os.path.abspath(os.path.join(dirpath, "..", "stav.osm"))
+
+    # Count frequency of tags in the xml file
+    tags = parse_xml.count_tags(filepath)
+
+    print("tags present in dataset")
+    pprint.pprint(tags)
+
+    issues = parse_xml.attribute_compare(filepath, "tag", "k")
+
+    print("issues")
+    pprint.pprint(issues)
+
+    users = parse_xml.get_unique(filepath, "user")
+    print("unique users")
+    pprint.pprint(users)
+
 
 if __name__ == '__main__':
     main()
