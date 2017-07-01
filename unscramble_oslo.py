@@ -51,5 +51,10 @@ def main():
     print("issues")
     pprint.pprint(issues)
 
+    users = parse_xml.get_unique(filepath, "user")
+    print("unique users")
+    pprint.pprint(users)
+
+
 if __name__ == '__main__':
     main()

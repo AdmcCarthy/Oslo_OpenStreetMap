@@ -61,3 +61,29 @@ def attribute_compare(file, tag_v, attribute):
     key = process_map(file)
 
     return key
+
+
+def get_unique(file, attribute):
+    """Count the number of
+    unique values in an attribute.
+    """
+
+    def get_user(element):
+        d = element.attrib
+        if attribute in d:
+            name = element.attrib[attribute]
+            return name
+
+
+    def process_map(filename):
+        users = set()
+        for _, element in ET.iterparse(filename):
+            name = get_user(element)
+            users.add(name)
+
+        users.remove(None)
+        return users
+
+
+    user = process_map(file)
+    return user
