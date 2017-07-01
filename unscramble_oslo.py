@@ -5,13 +5,12 @@ Data Analyst nano-degree.
 """
 
 import os
+import pprint
 from unscramble import (
     dataset,
-    resample,
-    xml_split
+    parse_xml,
     )
 
-import bz2
 
 def main():
     """Investigate the Oslo
@@ -26,7 +25,7 @@ def main():
     # data stored in folder above repository
     dataset.get_data(dirpath)
 
-    filepath = os.path.abspath(os.path.join(dirpath, "..", "oslo_norway"))
+    filepath = os.path.abspath(os.path.join(dirpath, "..", "oslo_norway.osm"))
 
     # File is in a bz2 during download
     # !!! Currently no method to decompress a
@@ -39,7 +38,13 @@ def main():
     # Modify the filepath if required.
 
     if test:
-        filepath = os.path.abspath(os.path.join(dirpath, "..", "stav"))
+        filepath = os.path.abspath(os.path.join(dirpath, "..", "stav.osm"))
+
+    # Count frequency of tags in the xml file
+    tags = parse_xml.count_tags(filepath)
+
+    print("tags present in dataset")
+    pprint.pprint(tags)
 
 if __name__ == '__main__':
     main()
