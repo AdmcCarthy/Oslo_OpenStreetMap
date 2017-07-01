@@ -18,7 +18,7 @@ def main():
     OpenStreetMap dataset.
     """
 
-    test = False
+    test = True
 
     dirpath = os.path.dirname(__file__)
 
@@ -38,6 +38,8 @@ def main():
     #
     # Modify the filepath if required.
 
+    if test:
+        filepath = os.path.abspath(os.path.join(dirpath, "..", "stav"))
 
 if __name__ == '__main__':
     main()
