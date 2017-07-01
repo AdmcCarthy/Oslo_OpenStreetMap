@@ -7,7 +7,8 @@ Data Analyst nano-degree.
 import os
 from unscramble import (
     dataset,
-    resample
+    resample,
+    xml_split
     )
 
 import bz2
@@ -25,7 +26,7 @@ def main():
     # data stored in folder above repository
     dataset.get_data(dirpath)
 
-    filepath = os.path.abspath(os.path.join(dirpath, "..", "oslo_norway.osm"))
+    filepath = os.path.abspath(os.path.join(dirpath, "..", "oslo_norway"))
 
     # File is in a bz2 during download
     # !!! Currently no method to decompress a
@@ -36,8 +37,9 @@ def main():
     # e.g. 7Zip for windows
     #
     # Modify the filepath if required.
-    filepath = filepath
 
+
+    
     if test:
         # Reduce the number of elements to speed up testing
         resample.sample(filepath, "sample.osm")
