@@ -55,6 +55,8 @@ def main():
     print("unique users")
     pprint.pprint(users)
 
+    # new_names = parse_xml.way_name(filepath)
+    # pprint.pprint(new_names)
 
 if __name__ == '__main__':
     main()
