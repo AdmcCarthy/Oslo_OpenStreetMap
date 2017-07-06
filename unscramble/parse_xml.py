@@ -143,7 +143,6 @@ def way_name(filename):
         street = street_type_re.search(name)
 
         if street:
-            print(street)
             replacement = mapping[street.group()]
             name = street_type_re.sub(replacement, name)
 
