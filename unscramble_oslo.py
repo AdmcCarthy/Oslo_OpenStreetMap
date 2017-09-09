@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Completed for Udacity
-Data Analyst nano-degree.
+"""Unscramble OSM data.
+
+Parse through then asses data from open street maps.
 """
 
 import os
